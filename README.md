@@ -1,9 +1,6 @@
 # Cadastro de Fotos
 
-**CP**
-
 - Deve ser possível cadastrar um usuario.
-**CP**
 
 - Não deve ser possível cadastrar um usuario com nome já existente.
 - O usuário responsável pelo Create, Update e Delete deve ser um usuário administrador.
