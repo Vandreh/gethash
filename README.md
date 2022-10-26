@@ -23,6 +23,7 @@
 
 
 **URL's**
+
 ***Sign Up***
 - POST: https://gethash.herokuapp.com/users
 body(JSON):
