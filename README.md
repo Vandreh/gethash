@@ -49,8 +49,8 @@ body(JSON):
 ***Guardar uma foto***
 - POST: https://gethash.herokuapp.com/photos/:user_id
 	Multipart Form
-  { "images": "File"
-  "title": "Titulo da foto"
+  { "images": "File",
+  "title": "Titulo da foto",
   "description": "descrição da foto" }
   
 ***Atualizar uma foto***
