@@ -1,0 +1,27 @@
+yarn init -y
+yarn add express
+yarn add typescript -D
+yarn tsc --init
+yarn tsc
+yarn add ts-node-dev -D
+yarn add uuid
+yarn add @types/uuid -D
+yarn add multer
+yarn add @types/multer -D
+yarn add typeorm@0.2.31 reflect-metadata@0.1.13 
+yarn add pg
+
+yarn typeorm migration:create -n CreatePhotos
+yarn typeorm migration:run
+yarn typeorm migration:revert
+
+yarn add tsyringe@4.4.0
+
+yarn typeorm migration:create -n CreateUsers
+yarn typeorm migration:run
+
+yarn add bcrypt
+yarn add @types/bcrypt -D
+yarn add jsonwebtoken
+yarn add @types/jsonwebtoken -D
+yarn add express-async-errors
