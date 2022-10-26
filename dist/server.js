@@ -8,4 +8,6 @@ const app = (0, express_1.default)();
 app.get('/', (req, res) => {
     return res.json({ message: 'Hello World' });
 });
-app.listen(3333);
+
+const port = process.env.PORT;
+app.listen(port);
