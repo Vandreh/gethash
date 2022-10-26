@@ -11,17 +11,17 @@
 # Listagem de Fotos
 
 
-**O usuário não precisar estar logado no sistema:**
+**O usuário não precisar estar logado no sistema para:**
 
-- Deve ser possível listar todas as fotos
-- Deve ser possível listar todas as fotos disponíveis pelo - titulo da foto
+- Listar todas as fotos
+- Buscar fotos pelo titulo da foto
 
 
-**O usuário precisar estar logado no sistema:**
+**O usuário precisar estar logado no sistema para:**
 
-- Deve ser possível cadastrar fotos com titulo e descrição
-- Deve ser possível atualizar a descripção de fotos
-- Deve ser possível deletar fotos
+- Cadastrar fotos com titulo e descrição
+- Atualizar a descripção de fotos
+- Deletar fotos
 
 
 **URL's**
