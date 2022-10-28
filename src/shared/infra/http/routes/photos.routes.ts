@@ -8,6 +8,7 @@ import { ListPhotosController } from '../../../../modules/photos/useCases/listPh
 import { ListOnePhotoController } from '../../../../modules/photos/useCases/listOnePhoto/ListOnePhotosController';
 import { UploadPhotoController } from '../../../../modules/photos/useCases/uploadPhoto/UploadPhotosController';
 import { DeletePhotoController } from '../../../../modules/photos/useCases/deletePhoto/DeletePhotoController';
+import { SearchPhotosController } from '../../../../modules/photos/useCases/searchPhotos/SearchPhotosController';
 
 
 const photosRoutes = Router();
@@ -21,10 +22,12 @@ const listOnePhotoController = new ListOnePhotoController();
 const listPhotosController = new ListPhotosController();
 const uploadPhotoController = new UploadPhotoController();
 const deletePhotoController = new DeletePhotoController();
+const searchPhotosController = new SearchPhotosController();
 
 const uploadImage = multer(uploadConfig.upload('./img'));
 
-photosRoutes.get('/' , listPhotosController.handle);
+//photosRoutes.get('/' , listPhotosController.handle);
+photosRoutes.get('/', searchPhotosController.handle);
 photosRoutes.get('/:title' , listOnePhotoController.handle);
 
 photosRoutes.use(ensureAuthenticated)

@@ -14,6 +14,7 @@ interface IPhotosRepository {
     create({ title, description, photo_file, user_id }: ICreatePhotoDTO): Promise<Photo>;
     updatePhoto(id: string, description: string): Promise<void>;
     deletePhoto(id: string): Promise<void>;
+    search(name: string): Promise<Photo[]>;
 }
 
 export { IPhotosRepository, ICreatePhotoDTO };

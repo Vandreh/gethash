@@ -22,6 +22,20 @@ class PhotosRepository implements IPhotosRepository {
             .setParameters({ id })
             .execute()
     }
+    async search(search: string): Promise<Photo[]> {
+        if (!search) {
+            const photos = await this.repository.find();
+            return photos;
+        } else {
+            const photos = await this.repository
+                .createQueryBuilder()
+                .where("LOWER(title) like LOWER(:name) or LOWER(description) like LOWER(:name)", { name:`%${search}%` })
+                .getMany();
+
+            return photos;
+        }
+    }
+    
 
     async create({ title, description, photo_file, user_id }: ICreatePhotoDTO): Promise<Photo> {
         const photo = this.repository.create({
